@@ -18,7 +18,7 @@
       @for (employee of employees(); track employee.name) {
         <tr [class.low]="isLow(employee)">
           <td>{{ employee.name }}</td>
-          <td class="num">{{ employee.totalHours }}</td>
+          <td class="num">{{ employee.totalHours | number: '1.2-2' }}</td>
         </tr>
       }
     </tbody>

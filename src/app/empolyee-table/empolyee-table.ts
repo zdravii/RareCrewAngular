@@ -5,7 +5,7 @@ import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-empolyee-table',
-  imports: [],
+  imports: [DecimalPipe],
   templateUrl: './empolyee-table.html',
   styleUrl: './empolyee-table.css',
 })
