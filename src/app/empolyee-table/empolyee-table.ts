@@ -2,10 +2,11 @@ import { Component, inject, signal } from '@angular/core';
 import { Employee } from '../services/employee';
 import { EmployeeTotalHours } from '../models/employee';
 import { DecimalPipe } from '@angular/common';
+import { PieChart } from '../pie-chart/pie-chart';
 
 @Component({
   selector: 'app-empolyee-table',
-  imports: [DecimalPipe],
+  imports: [DecimalPipe,PieChart],
   templateUrl: './empolyee-table.html',
   styleUrl: './empolyee-table.css',
 })
