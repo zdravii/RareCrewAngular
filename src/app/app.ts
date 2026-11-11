@@ -1,12 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+// Root component: just show the table. (File is app.ts in Angular 20+, app.component.ts before that.)
+import { Component } from '@angular/core';
+import { EmpolyeeTable } from './empolyee-table/empolyee-table';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  imports: [EmpolyeeTable],
+  template: `<app-empolyee-table />`,
 })
-export class App {
-  protected readonly title = signal('RareCrewAngular');
-}
+export class App {}

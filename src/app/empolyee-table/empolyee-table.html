@@ -1,0 +1,26 @@
+<h1>Employees by total time worked</h1>
+
+@if (loading()) {
+  <p>Loading...</p>
+} @else if (error()) {
+  <p class="error">Could not load data: {{ error() }}</p>
+} @else {
+  <p>Rows highlighted in red worked less than {{ lowHours }} hours.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Total Hours</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (employee of employees(); track employee.name) {
+        <tr [class.low]="isLow(employee)">
+          <td>{{ employee.name }}</td>
+          <td class="num">{{ employee.totalHours }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}
